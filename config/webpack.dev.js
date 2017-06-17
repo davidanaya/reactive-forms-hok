@@ -3,9 +3,10 @@ const webpackMerge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const commonConfig = require('./webpack.common.js');
 const path = require('path');
+const jsonServer = require('json-server');
 
 const settings = {
-  API: ''
+  API: 'http://localhost:8080/api'
 }
 
 module.exports = webpackMerge(commonConfig, {
@@ -21,7 +22,11 @@ module.exports = webpackMerge(commonConfig, {
     }),
   ],
   devServer: {
+    compress: true,
     historyApiFallback: true,
+    setup: function (app) {
+      app.use('/api', jsonServer.router('db.json'));
+    },
     stats: 'minimal'
   }
 });

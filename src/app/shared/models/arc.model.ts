@@ -1,0 +1,127 @@
+export class ArcForm {
+  client: string;
+  clientCode: string;
+  clientLead: string;
+  hokAccountLead: string;
+  hokMediaLead: string;
+  primaryConversionGoal: string;
+  secondaryConversionGoal: string;
+  clickCookieWindow: string;
+  impressionCookieWindow: string;
+  totalActualBudget: string;
+  plannedInvestment: string;
+  contingency: string;
+  startDate: string;
+  endDate: string;
+  country: string;
+  currency: string;
+  bau: string;
+  lastUpdated: string;
+
+  constructor() {
+    this.client = '';
+    this.clientCode = '';
+    this.clientLead = '';
+    this.hokAccountLead = '';
+    this.hokMediaLead = '';
+    this.primaryConversionGoal = '';
+    this.secondaryConversionGoal = '';
+    this.clickCookieWindow = '';
+    this.impressionCookieWindow = '';
+    this.totalActualBudget = '';
+    this.plannedInvestment = '';
+    this.contingency = '';
+    this.startDate = '';
+    this.endDate = '';
+    this.country = '';
+    this.currency = '';
+    this.bau = '';
+    this.lastUpdated = '';
+  }
+}
+
+export class ArcPublisher {
+  publisher: string;
+  producta: string;
+  targetinga: string;
+  targetingb: string;
+  campaign: string;
+  geoTarget: string;
+  pickup: string;
+  productb: string;
+  productc: string;
+  funding: string;
+  channel: string;
+  platform: string;
+  startDate: string;
+  endDate: string;
+  totalDays: string;
+  rate: string;
+  tradingModel: string;
+  netRate: string;
+  campaingBudget: string;
+  ioRegion: string;
+  ioLi: string;
+  xRate: string;
+  marginPerc: string;
+  plannedRevenue: string;
+  campaignBudget$: string;
+  margin$: string;
+  totalBudget$: string;
+  fees: string;
+  totalInvestment: string;
+  ctr: string;
+  plannedConversions: string;
+  totalImpressions: string;
+  totalClicks: string;
+  conversions: string;
+  mediaCpaGoal: string;
+  clientCpaGoal: string;
+  dailySpend: string;
+  totalRevenue: string;
+  cosPercLimit: string;
+  roiPercLimit: string;
+
+  constructor() {
+    this.publisher = '';
+    this.producta = '';
+    this.targetinga = '';
+    this.targetingb = '';
+    this.campaign = '';
+    this.geoTarget = '';
+    this.pickup = '';
+    this.productb = '';
+    this.productc = '';
+    this.funding = '';
+    this.channel = '';
+    this.platform = '';
+    this.startDate = '';
+    this.endDate = '';
+    this.totalDays = '';
+    this.rate = '';
+    this.tradingModel = '';
+    this.netRate = '';
+    this.campaingBudget = '';
+    this.ioRegion = '';
+    this.ioLi = '';
+    this.xRate = '';
+    this.marginPerc = '';
+    this.plannedRevenue = '';
+    this.campaignBudget$ = '';
+    this.margin$ = '';
+    this.totalBudget$ = '';
+    this.fees = '';
+    this.totalInvestment = '';
+    this.ctr = '';
+    this.plannedConversions = '';
+    this.totalImpressions = '';
+    this.totalClicks = '';
+    this.conversions = '';
+    this.mediaCpaGoal = '';
+    this.clientCpaGoal = '';
+    this.dailySpend = '';
+    this.totalRevenue = '';
+    this.cosPercLimit = '';
+    this.roiPercLimit = '';
+  }
+}

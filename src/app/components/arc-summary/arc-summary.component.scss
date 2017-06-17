@@ -1,0 +1,14 @@
+.summary__columns {
+  display: flex;
+  align-items: center;
+
+  > div {
+    flex: 1;
+  }
+
+  .summary__column--left,
+  .summary__column--right {
+    display: flex;
+    flex-direction: column;
+  }
+}

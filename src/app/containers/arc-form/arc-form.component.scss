@@ -1,0 +1,15 @@
+.arc-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.publishers {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .publishers__button--add {
+    background-color: lightgreen;
+  }
+}
