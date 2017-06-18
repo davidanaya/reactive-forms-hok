@@ -8,59 +8,7 @@ import { Data } from '../../shared/models/data.model';
 
 @Component({
   selector: 'arc-summary',
-  template: `
-    <div [formGroup]="parent">
-      <div class="summary__columns" formGroupName="summary">
-        <div class="summary__column--left">
-          <select formControlName="client">
-            <option value="">Client</option>
-            <option *ngFor="let item of data.clients" [value]="item.value">{{ item.value }}</option>
-          </select>
-          <input type="text" formControlName="clientCode" placeholder="Client Code"/>
-          <input type="text" formControlName="clientLead" placeholder="Client Lead">
-          <input type="text" formControlName="hokAccountLead" placeholder="HOK Account Lead">
-          <input type="text" formControlName="hokMediaLead" placeholder="HOK Media Lead">
-          <select formControlName="primaryConversionGoal">
-            <option value="">Primary Conversion Goal</option>
-            <option *ngFor="let item of data.convgoal" [value]="item.value">{{ item.value }}</option>
-          </select>
-          <select formControlName="secondaryConversionGoal">
-            <option value="">Secondary Conversion Goal</option>
-            <option *ngFor="let item of data.convgoal" [value]="item.value">{{ item.value }}</option>
-          </select>
-          <select formControlName="clickCookieWindow">
-            <option value="">Click Cookie Window</option>
-            <option *ngFor="let item of data.cookie" [value]="item.value">{{ item.value }}</option>
-          </select>
-          <select formControlName="impressionCookieWindow">
-            <option value="">Impression Cookie Window</option>
-            <option *ngFor="let item of data.cookie" [value]="item.value">{{ item.value }}</option>
-          </select>
-        </div>
-
-        <div class="summary__column--right">
-          <input type="text" formControlName="totalActualBudget" placeholder="Total Actual Budget">
-          <input type="text" formControlName="plannedInvestment" placeholder="Planned Investment">
-          <input type="text" formControlName="contingency" placeholder="Contingency">
-          <input type="date" formControlName="startDate" placeholder="Start Date">
-          <input type="date" formControlName="endDate" placeholder="End Date">
-          <select formControlName="country">
-            <option value="">Country</option>
-            <option *ngFor="let item of data.geo" [value]="item.value">{{ item.value }}</option>
-          </select>
-          <select formControlName="currency">
-            <option value="">Currency</option>
-            <option *ngFor="let item of data.currency" [value]="item.value">{{ item.value }}</option>
-          </select>
-          <select formControlName="bau">
-            <option value="">BAU or Special Project</option>
-            <option *ngFor="let item of data.inputBusType" [value]="item.value">{{ item.value }}</option>
-          </select>
-          <input type="date" formControlName="lastUpdated" placeholder="Last Updated">
-        </div>
-      </div>
-    </div>
-  `,
+  templateUrl: 'arc-summary.component.html',
   styleUrls: ['arc-summary.component.scss']
 })
 export class ArcSummaryComponent implements OnInit {
