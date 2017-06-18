@@ -19,7 +19,7 @@ import { ArcForm, ArcPublisher } from '../../shared/models/arc.model';
       <h4>Publishers</h4>
       <div class="publishers">
         <button class="btn publishers__button--add" type="button" (click)="addPublisher()">Add Publisher</button>
-        <!--arc-publishers [parent]="form" [data]="data" (removed)="removePublisher($event)"></arc-publishers-->
+        <arc-publishers [parent]="form" [data]="data" (removed)="removePublisher($event)"></arc-publishers>
       </div>
 
       <div class="summary-form__buttons">

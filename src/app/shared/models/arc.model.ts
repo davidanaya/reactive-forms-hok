@@ -55,7 +55,7 @@ export class ArcPublisher {
   platform: string;
   startDate: string;
   endDate: string;
-  totalDays: string;
+  totalDays: number;
   rate: string;
   tradingModel: string;
   netRate: string;
@@ -97,7 +97,7 @@ export class ArcPublisher {
     this.platform = '';
     this.startDate = '';
     this.endDate = '';
-    this.totalDays = '';
+    this.totalDays = undefined;
     this.rate = '';
     this.tradingModel = '';
     this.netRate = '';

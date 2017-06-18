@@ -68,10 +68,7 @@ export class ArcSummaryComponent implements OnInit {
   @Input() data: any;
 
   summary: FormGroup;
-
   clientsMap: Map<string, string>;
-
-  clientCode$: Observable<string>;
 
   constructor() {}
 
