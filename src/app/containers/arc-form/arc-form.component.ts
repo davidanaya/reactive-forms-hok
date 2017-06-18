@@ -30,7 +30,7 @@ import { ArcForm, ArcPublisher } from '../../shared/models/arc.model';
 
     </form>
   `,
-  styleUrls: ['arc-form.component.scss']
+  styleUrls: ['./arc-form.component.scss']
 })
 export class ArcFormComponent implements OnInit {
   data: any;

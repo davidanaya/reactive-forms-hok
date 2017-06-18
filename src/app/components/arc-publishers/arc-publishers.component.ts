@@ -7,8 +7,8 @@ import { ArcPublisher } from '../../shared/models/arc.model';
 
 @Component({
   selector: 'arc-publishers',
-  templateUrl: 'arc-publishers.component.html',
-  styleUrls: ['arc-publishers.component.scss']
+  templateUrl: './arc-publishers.component.html',
+  styleUrls: ['./arc-publishers.component.scss']
 })
 export class ArcPublishersComponent implements OnInit {
   @Input() parent: FormGroup;

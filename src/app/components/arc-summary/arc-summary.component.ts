@@ -8,8 +8,8 @@ import { Data } from '../../shared/models/data.model';
 
 @Component({
   selector: 'arc-summary',
-  templateUrl: 'arc-summary.component.html',
-  styleUrls: ['arc-summary.component.scss']
+  templateUrl: './arc-summary.component.html',
+  styleUrls: ['./arc-summary.component.scss']
 })
 export class ArcSummaryComponent implements OnInit {
   @Input() parent: FormGroup;

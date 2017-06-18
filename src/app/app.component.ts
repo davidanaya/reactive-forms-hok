@@ -5,7 +5,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   template: `
     <arc-form></arc-form>
   `,
-  styleUrls: ['app.component.scss'],
+  styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
