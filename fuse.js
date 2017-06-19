@@ -10,7 +10,7 @@ const {
 } = require('fuse-box');
 
 const path = require('path');
-const Ng2TemplatePlugin = require('ng2-fused');
+const { Ng2TemplatePlugin } = require('ng2-fused');
 const jsonServer = require('json-server');
 
 const settings = {
