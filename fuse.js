@@ -2,16 +2,19 @@ const {
   FuseBox,
   CSSPlugin,
   SassPlugin,
+  HTMLPlugin,
   RawPlugin,
   WebIndexPlugin,
   Sparky,
   EnvPlugin
 } = require('fuse-box');
 
-const { Ng2TemplatePlugin } = require('ng2-fused');
+const path = require('path');
+const Ng2TemplatePlugin = require('ng2-fused');
+const jsonServer = require('json-server');
 
 const settings = {
-  API: 'http://localhost:8080/api'
+  API: 'http://localhost:4444/api'
 };
 
 const fuse = FuseBox.init({
@@ -19,9 +22,13 @@ const fuse = FuseBox.init({
   output: 'dist/$name.js',
   plugins: [
     EnvPlugin({ SETTINGS: settings }),
+    Ng2TemplatePlugin(),
+    ['*.component.scss', RawPlugin()],
+    HTMLPlugin({
+      useDefault: false
+    }),
     [SassPlugin(), CSSPlugin()],
     CSSPlugin(),
-    Ng2TemplatePlugin(),
     WebIndexPlugin({
       title: 'hok punchcard 👊',
       path: '.',
@@ -30,7 +37,10 @@ const fuse = FuseBox.init({
   ]
 });
 
-fuse.dev();
+fuse.dev({ root: 'dist' }, server => {
+  const app = server.httpServer.app;
+  app.use('/api', jsonServer.router('db.json'));
+});
 
 fuse.bundle('polyfills').instructions('> polyfills.ts');
 fuse.bundle('vendor').instructions('> vendor.ts');
